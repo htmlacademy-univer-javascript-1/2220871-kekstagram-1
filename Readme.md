@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Анна Чупшева](https://up.htmlacademy.ru/univer-js1/1/user/2220871).
-* Наставник: `Дмитрий Рябинин`.
+* Наставник: [Дмитрий Рябинин](https://htmlacademy.ru/profile/haschish).
 
 ---
 
