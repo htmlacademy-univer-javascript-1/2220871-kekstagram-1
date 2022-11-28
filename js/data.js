@@ -8,6 +8,14 @@ const message = [
   'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
 ];
+const pictureDescribe = [
+  'Давайте разбираться: героям были возданы соответствующие почести', 'Господа, кровь стынет в жилах!',
+  'Граница обучения кадров одухотворила всех причастных', 'Благородные стремления не спасут: кровь стынет в жилах',
+  'Не следует забывать, что младая поросль матереет', 'Выбранный нами инновационный путь обнадёживает',
+  'Прототип нового сервиса — это как звон колоколов', 'Смешно, но герцог графства коронован',
+  'Органический трафик попахивает безумием', 'Высококачественный прототип будущего проекта определил дальнейшее развитие'
+];
+
 /*
 const description = [
   'Осеннее настроение',
@@ -45,13 +53,13 @@ function createRandomComments(size) {
   return comments;
 }
 
-export function createImageDescriptions(sizeDescription = 26) {
+export function createImageDescribe(sizeDescription) {
   const descriptions = [];
-  for (let i = 1; i < sizeDescription; i++) {
+  for (let i = 0; i < sizeDescription; i++) {
     descriptions[i] = {
-      id: i,
-      url: `photos/${i}.jpg`,
-      description: '',
+      id: i + 1,
+      url: `photos/${i + 1}.jpg`,
+      description: getRandomArrayElement(pictureDescribe),
       likes: getRandomPositiveInteger(15, 200),
       comments: createRandomComments(6)
     };
