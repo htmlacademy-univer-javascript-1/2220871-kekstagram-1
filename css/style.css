@@ -150,6 +150,12 @@ main {
   border: none;
 }
 
+.img-filters__button:hover {
+  color: #ff4e4e;
+  background-color: #ffffff;
+}
+
+
 .img-filters__button:active,
 .img-filters__button--active {
   color: #ff4e4e;
