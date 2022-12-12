@@ -1,5 +1,14 @@
-import { createImageDescriptions } from './data.js';
-import { createUsersPictures } from './draw.js';
+import {renderUserPhotos} from './pictures.js';
+import {initEffects} from './effects.js';
+import {closeUploadPopup} from './formSettings.js';
+import {submitForm} from './formSettings.js';
+import {getData} from './api.js';
+import {showFilteredPictures} from './filter.js';
 
-createImageDescriptions();
-createUsersPictures(25);
+getData((pictures) => {
+  renderUserPhotos(pictures);
+  showFilteredPictures(pictures);
+});
+
+submitForm(closeUploadPopup);
+initEffects();
